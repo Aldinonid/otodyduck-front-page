@@ -45,7 +45,7 @@ export default function Header(props) {
               </li>
               <li className={`nav-item${getNavLinkClass("/login")}`}>
                 <Button
-                  className="btn btn-primary login"
+                  className="btn btn-primary text-white medium"
                   type="link"
                   href="/login"
                 >

@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+@import "colorVariables";
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -45,7 +46,6 @@
 
 .brand-text-icon {
   font-size: 36px;
-  font-weight: 500;
   font-family: "Montserrat", sans-serif;
   color: $primary;
 
@@ -55,11 +55,15 @@
   }
 }
 
+.medium {
+  font-weight: 600;
+}
+
 header {
   border-bottom: 1px solid $gray-200;
   width: 100%;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 
   .navbar {
     height: 80px;
@@ -67,6 +71,7 @@ header {
     ul.navbar-nav {
       li.nav-item {
         font-weight: 600;
+
         &.active {
           a.nav-link {
             color: $primary;
@@ -75,7 +80,7 @@ header {
 
         a {
           &.nav-link {
-            // letter-spacing: 1px;
+            letter-spacing: 0.5px;
             color: $gray-900;
             padding-left: 1rem;
             padding-right: 1rem;
@@ -87,9 +92,9 @@ header {
         }
       }
     }
-    .login {
-      color: $white;
-      font-weight: 600;
-    }
   }
+}
+
+section {
+  margin-bottom: 70px;
 }

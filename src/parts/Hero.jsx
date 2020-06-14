@@ -11,7 +11,7 @@ export default function Hero(props) {
   return (
     <section className="container">
       <div className="row align-items-center">
-        <div className="col-auto pr-5" style={{ marginTop: 70, width: 530 }}>
+        <div className="col-auto pr-5" style={{ marginTop: 50, width: 530 }}>
           <h1 className="font-weight-bold line-height-1 mb-3">
             Take <span className="text-primary">New</span> Step, <br />
             Upgrade New <span className="text-primary">Skill</span>

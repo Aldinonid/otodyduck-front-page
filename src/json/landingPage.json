@@ -4,8 +4,7 @@
     "classes": 5045,
     "teachers": 102
   },
-  "class": [
-    {
+  "class": [{
       "_id": "asd1293uasdads1",
       "name": "React JS",
       "price": 350000,
@@ -33,7 +32,7 @@
       "price": 450000,
       "teacher": {
         "name": "前島亜美",
-        "job": "Voice Actor",
+        "job": "Singer",
         "imageUrl": "/images/img-teacher-3.jpg"
       },
       "imageUrl": "/images/img-class-3.jpg"
@@ -65,8 +64,8 @@
       "name": "Premiere Pro",
       "price": 450000,
       "teacher": {
-        "name": "長澤茉里奈",
-        "job": "Gravure Model",
+        "name": "伊藤彩沙",
+        "job": "Voice Actor",
         "imageUrl": "/images/img-teacher-6.jpg"
       },
       "imageUrl": "/images/img-class-6.jpg"
@@ -74,8 +73,7 @@
   ],
   "stories": {
     "totalReview": 14546,
-    "testimonial": [
-      {
+    "testimonial": [{
         "rate": 4,
         "content": "Kelas yang paling recommended pokoknya buat investasi ilmu di era revolusi industri 4.0.",
         "member": {

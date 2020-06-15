@@ -59,6 +59,19 @@ export default function ClassList({ data }) {
           );
         })}
       </div>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col text-center">
+            <Button
+              type="link"
+              href="/all-class"
+              className="btn btn-primary medium text-white mt-5 px-3 py-2"
+            >
+              View All Class
+            </Button>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

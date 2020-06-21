@@ -12,7 +12,7 @@ export default function Header(props) {
       <header className="spacing-sm">
         <div className="container">
           <div className="navbar navbar-expand-lg navbar-light">
-            <Button type="link" href="" className="brand-text-icon mx-auto">
+            <Button type="link" href="/" className="brand-text-icon mx-auto">
               Stay<span className="text-gray-900">cation.</span>
             </Button>
           </div>

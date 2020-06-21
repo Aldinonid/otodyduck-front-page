@@ -4,8 +4,10 @@
     "classes": 5045,
     "teachers": 102
   },
-  "class": [{
+  "class": [
+    {
       "_id": "asd1293uasdads1",
+      "type": "PREMIUM",
       "name": "React JS",
       "price": 350000,
       "teacher": {
@@ -17,6 +19,7 @@
     },
     {
       "_id": "asd1293uasdads1",
+      "type": "PREMIUM",
       "name": "Node JS",
       "price": 250000,
       "teacher": {
@@ -28,6 +31,7 @@
     },
     {
       "_id": "asd1293uasdads1",
+      "type": "PREMIUM",
       "name": "MongoDB",
       "price": 450000,
       "teacher": {
@@ -39,6 +43,7 @@
     },
     {
       "_id": "asd1293uasdads1",
+      "type": "PREMIUM",
       "name": "Microsoft Excel",
       "price": 100000,
       "teacher": {
@@ -50,17 +55,19 @@
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "Bootstrap 4",
-      "price": 150000,
+      "type": "FREE",
+      "name": "Trello Project Management",
+      "price": 0,
       "teacher": {
-        "name": "Sandhika Galih",
-        "job": "Front-End Developer",
-        "imageUrl": "/images/img-teacher-5.jpg"
+        "name": "Aldino Efendi",
+        "job": "Full-Stack Web Developer",
+        "imageUrl": "/images/img-teacher-1.jpeg"
       },
-      "imageUrl": "/images/img-class-5.jpg"
+      "imageUrl": "/images/img-class-7.jpg"
     },
     {
       "_id": "asd1293uasdads1",
+      "type": "PREMIUM",
       "name": "Premiere Pro",
       "price": 450000,
       "teacher": {
@@ -69,11 +76,24 @@
         "imageUrl": "/images/img-teacher-6.jpg"
       },
       "imageUrl": "/images/img-class-6.jpg"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "type": "PREMIUM",
+      "name": "Bootstrap 4",
+      "price": 150000,
+      "teacher": {
+        "name": "Sandhika Galih",
+        "job": "Front-End Developer",
+        "imageUrl": "/images/img-teacher-5.jpg"
+      },
+      "imageUrl": "/images/img-class-5.jpg"
     }
   ],
   "stories": {
     "totalReview": 14546,
-    "testimonial": [{
+    "testimonial": [
+      {
         "rate": 4,
         "content": "Kelas yang paling recommended pokoknya buat investasi ilmu di era revolusi industri 4.0.",
         "member": {

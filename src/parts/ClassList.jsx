@@ -1,7 +1,7 @@
 import React from "react";
 
 import Button from "elements/Button";
-import formatNumber from "utils/formatNumber";
+import Card from "elements/Card";
 
 export default function ClassList({ data }) {
   return (
@@ -16,45 +16,21 @@ export default function ClassList({ data }) {
       </div>
 
       <div className="container-grid">
-        {data.map((item, index) => {
+        {/* DO LOOPING FOR 6 CARD */}
+
+        {data.slice(0, 6).map((item, index) => {
           return (
             <div className="item column-4" key={index}>
-              <div className="card">
-                <Button
-                  type="link"
-                  href={`/class/${item._id}`}
-                  className="stretched-link d-block"
-                ></Button>
-                <img src={`${item.imageUrl}`} alt="" className="img-class" />
-                <h3 className="mb-3 text-dark">{item.name}</h3>
-                <hr />
-                <h4 className="mt-2 mb-3 text-dark">
-                  Rp {formatNumber(item.price)}
-                </h4>
-                <hr />
-                <div className="row align-items-center no-gutters">
-                  <div className="mt-2 mb-3 col-auto">
-                    <img
-                      src={item.teacher.imageUrl}
-                      alt=""
-                      height="50px"
-                      width="50px"
-                      style={{ borderRadius: "50px" }}
-                    />
-                  </div>
-                  <div className="col pl-2">
-                    <h5
-                      className="mt-2 line-height-1 text-dark"
-                      style={{ marginBottom: "5px" }}
-                    >
-                      {item.teacher.name}
-                    </h5>
-                    <h6 className="font-weight-medium text-dark">
-                      {item.teacher.job}
-                    </h6>
-                  </div>
-                </div>
-              </div>
+              <Card
+                item_id={item._id}
+                imageUrl={item.imageUrl}
+                name={item.name}
+                type={item.type}
+                price={item.price}
+                teacherImg={item.teacher.imageUrl}
+                teacherName={item.teacher.name}
+                teacherJob={item.teacher.job}
+              />
             </div>
           );
         })}

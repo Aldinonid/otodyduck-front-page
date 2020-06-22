@@ -1,0 +1,39 @@
+{
+  "flowList": [
+    {
+      "name": "React Native Apps Developer",
+      "level": "Beginner",
+      "classList": "4"
+    },
+    {
+      "name": "Flutter Developer",
+      "level": "Beginner",
+      "classList": "6"
+    },
+    {
+      "name": "Adobe Video Editing",
+      "level": "All",
+      "classList": "8"
+    },
+    {
+      "name": "Microsoft Office",
+      "level": "All",
+      "classList": "10"
+    },
+    {
+      "name": "Website Laravel & React JS",
+      "level": "Intermediate",
+      "classList": "6"
+    },
+    {
+      "name": "Full-Stack Javascript Developer",
+      "level": "Intermediate",
+      "classList": "7"
+    },
+    {
+      "name": "Full-Stack Web Designer",
+      "level": "Beginner",
+      "classList": "4"
+    }
+  ]
+}

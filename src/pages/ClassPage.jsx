@@ -1,23 +1,21 @@
 import React, { Component } from "react";
 
 import Header from "parts/Header";
-import Hero from "parts/Hero";
-import ClassList from "parts/ClassList";
+import ClassList from "parts/AllClassList";
 import Flow from "parts/Flow";
 import Footer from "parts/Footer";
 
-import landingPage from "json/landingPage.json";
+import classPage from "json/classPage.json";
 
-export default class LandingPage extends Component {
+export default class ClassPage extends Component {
   componentDidMount() {
-    document.title = "Otodyduck | Home";
+    document.title = "Otodyduck | Class List";
   }
   render() {
     return (
       <>
         <Header {...this.props} />
-        <Hero data={landingPage.hero} />
-        <ClassList data={landingPage.class} />
+        <ClassList data={classPage.classList} />
         <Flow />
         <Footer />
       </>

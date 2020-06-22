@@ -98,7 +98,7 @@ export default function Footer() {
 
         <div className="row">
           <div className="col text-center copyrights">
-            Copyrights {year.getFullYear()} - All rights reserved - Staycation
+            © {year.getFullYear()} • All rights reserved • Otodyduck
           </div>
         </div>
       </div>

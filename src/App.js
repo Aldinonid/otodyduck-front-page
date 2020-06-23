@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import LoginPage from "pages/LoginPage";
 import LandingPage from "pages/LandingPage";
 import ClassPage from "pages/ClassPage";
 import FlowPage from "pages/FlowPage";
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/class" component={ClassPage} />
         <Route exact path="/flow" component={FlowPage} />
+        <Route exact path="/login" component={LoginPage} />
       </Router>
     </div>
   );

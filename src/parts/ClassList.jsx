@@ -1,6 +1,6 @@
 import React from "react";
 
-import Card from "elements/Card";
+import ClassCard from "elements/ClassCard";
 
 export default function ClassList({ data }) {
   return (
@@ -22,7 +22,7 @@ export default function ClassList({ data }) {
           {data.slice(0, 6).map((item, index) => {
             return (
               <div className="item column-4" key={index}>
-                <Card
+                <ClassCard
                   item_id={item._id}
                   imageUrl={item.imageUrl}
                   name={item.name}

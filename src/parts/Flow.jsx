@@ -18,7 +18,7 @@ export default function Flow() {
             </p>
             <Button
               type="link"
-              href="/flow-learn"
+              href="/flow"
               className="btn btn-primary text-white medium mt-4"
               style={{ padding: "10px" }}
             >

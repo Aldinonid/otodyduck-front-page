@@ -2,6 +2,9 @@ import React from "react";
 
 import ImageHero from "assets/images/img-hero.jpg";
 import ImageHeroFrame from "assets/images/img-hero-frame.jpg";
+import IconStudent from "assets/images/icon/ic-student.svg";
+import IconClass from "assets/images/icon/ic-class.svg";
+import IconTeacher from "assets/images/icon/ic-teacher.svg";
 
 import formatNumber from "utils/formatNumber.js";
 
@@ -26,7 +29,7 @@ export default function Hero(props) {
           <Button
             className="btn text-white medium px-5"
             type="link"
-            href="/all-class"
+            href="/class"
             isPrimary
             hasShadow
           >
@@ -38,7 +41,7 @@ export default function Hero(props) {
               <img
                 height="60"
                 width="60"
-                src="/images/icon-student.svg"
+                src={IconStudent}
                 alt={`${props.data.students} students`}
               />
               <h6 className="mt-3">
@@ -50,7 +53,7 @@ export default function Hero(props) {
               <img
                 height="60"
                 width="60"
-                src="/images/icon-class.svg"
+                src={IconClass}
                 alt={`${props.data.classes} classes`}
               />
               <h6 className="mt-3">
@@ -62,7 +65,7 @@ export default function Hero(props) {
               <img
                 height="60"
                 width="60"
-                src="/images/icon-teacher.svg"
+                src={IconTeacher}
                 alt={`${props.data.teachers} teachers`}
               />
               <h6 className="mt-3">

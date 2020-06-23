@@ -1,6 +1,6 @@
 import React from "react";
 
-import Card from "elements/Card";
+import ClassCard from "elements/ClassCard";
 
 import "assets/scss/style.scss";
 
@@ -27,7 +27,7 @@ export default function AllClassList({ data }) {
         {data.map((item, index) => {
           return (
             <div className="item column-4" key={index}>
-              <Card
+              <ClassCard
                 item_id={item._id}
                 imageUrl={item.imageUrl}
                 name={item.name}

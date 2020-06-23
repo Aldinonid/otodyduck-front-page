@@ -1,9 +1,10 @@
 import React from "react";
+import propTypes from "prop-types";
+
 import Button from "elements/Button";
 import formatNumber from "utils/formatNumber";
-import "./index.scss";
 
-import propTypes from "prop-types";
+import "./index.scss";
 
 export default function Card(props) {
   const MAX_LENGTH = 23;

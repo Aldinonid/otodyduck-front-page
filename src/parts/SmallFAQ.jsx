@@ -1,6 +1,5 @@
 import React from "react";
 
-import Button from "elements/Button";
 import imgFlow from "assets/images/flow-img.jpg";
 
 export default function SmallFAQ() {

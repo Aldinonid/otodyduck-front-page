@@ -8,7 +8,7 @@ import "assets/scss/style.scss";
 export default function AllClassList({ data }) {
   return (
     <section className="container">
-      <Fade>
+      <Fade bottom>
         <div className="text-center">
           <h1 className="medium">All Class</h1>
           <h5 className="text-gray-500">

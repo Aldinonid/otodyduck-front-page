@@ -6,7 +6,7 @@ import formatNumber from "utils/formatNumber";
 
 import "./index.scss";
 
-export default function Card(props) {
+export default function ClassCard(props) {
   const MAX_LENGTH = 23;
   const name = props.name;
   const className = ["badge-class", props.className];
@@ -53,7 +53,7 @@ export default function Card(props) {
   );
 }
 
-Card.propTypes = {
+ClassCard.propTypes = {
   className: propTypes.string,
   name: propTypes.string,
 };

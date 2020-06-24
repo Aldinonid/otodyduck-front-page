@@ -4,7 +4,7 @@ import Button from "elements/Button";
 
 import "./index.scss";
 
-export default function index(props) {
+export default function FlowCard(props) {
   const MAX_LENGTH = 40;
   const name = props.name;
   return (

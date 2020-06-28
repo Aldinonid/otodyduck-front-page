@@ -6,6 +6,7 @@ import LoginPage from "pages/LoginPage";
 import LandingPage from "pages/LandingPage";
 import ClassPage from "pages/ClassPage";
 import FlowPage from "pages/FlowPage";
+import DetailPage from "pages/DetailPage";
 
 import "assets/scss/style.scss";
 
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/class" component={ClassPage} />
+        <Route exact path="/class/:id" component={DetailPage} />
         <Route exact path="/flow" component={FlowPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegsiterPage} />

@@ -1,0 +1,125 @@
+{
+  "hero": {
+    "students": 102345,
+    "classes": 5045,
+    "teachers": 102
+  },
+  "class": [
+    {
+      "_id": "asd1293uasdads1",
+      "type": "PREMIUM",
+      "name": "React JS",
+      "price": 350000,
+      "teacher": {
+        "name": "Aldino Efendi",
+        "job": "Full-Stack Web Developer",
+        "imageUrl": "/images/img-teacher-1.jpeg"
+      },
+      "imageUrl": "/images/img-class-1.jpg"
+    },
+    {
+      "_id": "asd1293uasdads2",
+      "type": "PREMIUM",
+      "name": "Node JS",
+      "price": 250000,
+      "teacher": {
+        "name": "えみい",
+        "job": "Singer and Idol",
+        "imageUrl": "/images/img-teacher-2.jpg"
+      },
+      "imageUrl": "/images/img-class-2.jpg"
+    },
+    {
+      "_id": "asd1293uasdads3",
+      "type": "PREMIUM",
+      "name": "MongoDB",
+      "price": 450000,
+      "teacher": {
+        "name": "前島亜美",
+        "job": "Singer",
+        "imageUrl": "/images/img-teacher-3.jpg"
+      },
+      "imageUrl": "/images/img-class-3.jpg"
+    },
+    {
+      "_id": "asd1293uasdads5",
+      "type": "PREMIUM",
+      "name": "Bootstrap 4",
+      "price": 150000,
+      "teacher": {
+        "name": "Sandhika Galih",
+        "job": "Front-End Developer",
+        "imageUrl": "/images/img-teacher-5.jpg"
+      },
+      "imageUrl": "/images/img-class-5.jpg"
+    },
+    {
+      "_id": "asd1293uasdads7",
+      "type": "FREE",
+      "name": "Trello Project Management",
+      "price": 0,
+      "teacher": {
+        "name": "Aldino Efendi",
+        "job": "Full-Stack Web Developer",
+        "imageUrl": "/images/img-teacher-1.jpeg"
+      },
+      "imageUrl": "/images/img-class-7.jpg"
+    },
+    {
+      "_id": "asd1293uasdads6",
+      "type": "PREMIUM",
+      "name": "Premiere Pro",
+      "price": 450000,
+      "teacher": {
+        "name": "伊藤彩沙",
+        "job": "Voice Actor",
+        "imageUrl": "/images/img-teacher-6.jpg"
+      },
+      "imageUrl": "/images/img-class-6.jpg"
+    },
+    {
+      "_id": "asd1293uasdads4",
+      "type": "PREMIUM",
+      "name": "Microsoft Excel",
+      "price": 100000,
+      "teacher": {
+        "name": "さつき",
+        "job": "Professional Dancer",
+        "imageUrl": "/images/img-teacher-4.jpg"
+      },
+      "imageUrl": "/images/img-class-4.jpg"
+    }
+  ],
+  "stories": {
+    "totalReview": 14546,
+    "testimonial": [
+      {
+        "rate": 4,
+        "content": "Kelas yang paling recommended pokoknya buat investasi ilmu di era revolusi industri 4.0.",
+        "member": {
+          "name": "Kelvin",
+          "job": "Web Designer",
+          "imageUrl": "/images/image-user1"
+        }
+      },
+      {
+        "rate": 4.5,
+        "content": "Kelas yang sangat bermanfaat dan ilmu up-to-date sekali dan yang paling penting biayanya sangat terjangkau.",
+        "member": {
+          "name": "Albert",
+          "job": "Front-End Developer",
+          "imageUrl": "/images/image-user2"
+        }
+      },
+      {
+        "rate": 3,
+        "content": "Mentornya keren cara menyampaikan setiap materinya juga detail dan mudah dipahami.",
+        "member": {
+          "name": "Event",
+          "job": "Public Speaker",
+          "imageUrl": "/images/image-user3"
+        }
+      }
+    ]
+  }
+}

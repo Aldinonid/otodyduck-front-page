@@ -1,0 +1,23 @@
+<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="46" height="46" fill="white"/>
+<rect x="0.5" y="0.5" width="45" height="45" rx="0.5" fill="white" stroke="#101B52"/>
+<rect x="2.5" y="2.5" width="26" height="15" rx="0.5" fill="white" stroke="#101B52"/>
+<circle cx="35" cy="14" r="4.5" fill="white" stroke="#101B52"/>
+<circle cx="9" cy="32" r="3.5" fill="white" stroke="#101B52"/>
+<circle cx="23" cy="32" r="3.5" fill="white" stroke="#101B52"/>
+<circle cx="37" cy="32" r="3.5" fill="white" stroke="#101B52"/>
+<mask id="path-7-inside-1" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26 27H43.8762C43.3841 23.0537 40.0177 20 35.9381 20H33.9381C29.8585 20 26.4921 23.0537 26 27Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26 27H43.8762C43.3841 23.0537 40.0177 20 35.9381 20H33.9381C29.8585 20 26.4921 23.0537 26 27Z" fill="#FF498B"/>
+<path d="M26 27L25.0077 26.8763L24.8676 28H26V27ZM43.8762 27V28H45.0087L44.8685 26.8763L43.8762 27ZM26 28H43.8762V26H26V28ZM35.9381 21C39.507 21 42.4534 23.6717 42.8839 27.1237L44.8685 26.8763C44.3148 22.4356 40.5284 19 35.9381 19V21ZM33.9381 21H35.9381V19H33.9381V21ZM26.9923 27.1237C27.4228 23.6717 30.3692 21 33.9381 21V19C29.3478 19 25.5614 22.4356 25.0077 26.8763L26.9923 27.1237Z" fill="#101B52" mask="url(#path-7-inside-1)"/>
+<path d="M8 37.5H10C12.4853 37.5 14.5 39.5147 14.5 42V43.5H3.5V42C3.5 39.5147 5.51472 37.5 8 37.5Z" fill="#FF498B" stroke="#101B52"/>
+<path d="M22 37.5H24C26.4853 37.5 28.5 39.5147 28.5 42V43.5H17.5V42C17.5 39.5147 19.5147 37.5 22 37.5Z" fill="#FF498B" stroke="#101B52"/>
+<path d="M36 37.5H38C40.4853 37.5 42.5 39.5147 42.5 42V43.5H31.5V42C31.5 39.5147 33.5147 37.5 36 37.5Z" fill="#FF498B" stroke="#101B52"/>
+<line x1="4" y1="4.5" x2="15" y2="4.5" stroke="#FF498B"/>
+<line x1="4" y1="7.5" x2="27" y2="7.5" stroke="#FF498B"/>
+<line x1="4" y1="9.5" x2="22" y2="9.5" stroke="#FF498B"/>
+<line x1="4" y1="11.5" x2="24" y2="11.5" stroke="#FF498B"/>
+<line x1="4" y1="13.5" x2="20" y2="13.5" stroke="#FF498B"/>
+<line x1="4" y1="15.5" x2="26" y2="15.5" stroke="#FF498B"/>
+</svg>

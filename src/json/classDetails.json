@@ -1,8 +1,9 @@
 {
   "_id": "asd1293uasdads1",
-  "title": "React JS",
-  "classTeacher": "Aldin",
-  "students": 3489,
+  "slug": "react-js",
+  "name": "React JS",
+  "mentor": "Aldin",
+  "total_students": 3489,
   "level": "Intermediate",
   "trailerUrl": "https://youtu.be/ZNVRETPPW24",
   "courseList": [
@@ -13,31 +14,40 @@
     { "title": "Handle Event" },
     { "title": "Build a To Do list in React JS" },
     { "title": "Immutable in React JS" },
+    { "title": "Immutable in React JS" },
+    { "title": "Immutable in React JS" },
+    { "title": "Immutable in React JS" },
+    { "title": "Immutable in React JS" },
     { "title": "Consume API with React JS" }
   ],
-  "about": "React JS is a JavaScript library that is used by web developers to build websites that are more interactive, fast, and responsive. This library is often used to create a Single Page Application (SPA). In this free class we will build a simple online store using HTML, CSS, JavaScript (React JS). Of course we will learn the basics of using this library on our website such as Components, Props, Events, Conditional, and many others. ",
+  "description": "React JS is a JavaScript library that is used by web developers to build websites that are more interactive, fast, and responsive. This library is often used to create a Single Page Application (SPA). In this free class we will build a simple online store using HTML, CSS, JavaScript (React JS). Of course we will learn the basics of using this library on our website such as Components, Props, Events, Conditional, and many others. ",
   "tool": [
     {
       "name": "Visual Studio Code",
+      "imageurl": "/images/tool-1.png",
       "url": "https://code.visualstudio.com/download"
     },
     {
       "name": "React JS",
+      "imageurl": "/images/tool-2.png",
       "url": "https://reactjs.org/"
     },
     {
       "name": "Node JS",
+      "imageurl": "/images/tool-3.png",
       "url": "https://nodejs.org/en/download/"
     }
   ],
   "teacher": [
     {
       "name": "Aldino Efendi",
-      "job": "Full-Stack Web Developer"
+      "job": "Full-Stack Web Developer",
+      "imageUrl": "/images/img-teacher-1.jpeg"
     },
     {
-      "name": "Jefry",
-      "job": "Back-End Developer"
+      "name": "伊藤彩沙",
+      "job": "Voice Actor",
+      "imageUrl": "/images/img-teacher-6.jpg"
     }
   ]
 }

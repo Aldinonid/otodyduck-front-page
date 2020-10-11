@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="col">
               <IconText />
               <p className="brand-tagline">
-                We kaboom your beauty holiday instantly and memorable.
+                We provide all course that will make you greater than you past.
               </p>
             </div>
 

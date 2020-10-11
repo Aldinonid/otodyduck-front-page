@@ -15,7 +15,7 @@ export default function ClassCard(props) {
     <div className="card">
       <Button
         type="link"
-        href={`/class/${props.item_id}`}
+        href={`/class/${props.slug}`}
         className="stretched-link d-block"
       ></Button>
       <img src={props.imageUrl} alt={props.name} className="img-class" />

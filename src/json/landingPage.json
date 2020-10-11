@@ -7,6 +7,7 @@
   "class": [
     {
       "_id": "asd1293uasdads1",
+      "slug": "react-js",
       "type": "PREMIUM",
       "name": "React JS",
       "price": 350000,
@@ -19,6 +20,7 @@
     },
     {
       "_id": "asd1293uasdads2",
+      "slug": "node-js",
       "type": "PREMIUM",
       "name": "Node JS",
       "price": 250000,
@@ -31,6 +33,7 @@
     },
     {
       "_id": "asd1293uasdads3",
+      "slug": "mongodb",
       "type": "PREMIUM",
       "name": "MongoDB",
       "price": 450000,
@@ -43,6 +46,7 @@
     },
     {
       "_id": "asd1293uasdads5",
+      "slug": "bootstrap-4",
       "type": "PREMIUM",
       "name": "Bootstrap 4",
       "price": 150000,
@@ -55,6 +59,7 @@
     },
     {
       "_id": "asd1293uasdads7",
+      "slug": "trello-project-management",
       "type": "FREE",
       "name": "Trello Project Management",
       "price": 0,
@@ -67,6 +72,7 @@
     },
     {
       "_id": "asd1293uasdads6",
+      "slug": "premiere-pro",
       "type": "PREMIUM",
       "name": "Premiere Pro",
       "price": 450000,
@@ -79,6 +85,7 @@
     },
     {
       "_id": "asd1293uasdads4",
+      "slug": "microsoft-excel",
       "type": "PREMIUM",
       "name": "Microsoft Excel",
       "price": 100000,

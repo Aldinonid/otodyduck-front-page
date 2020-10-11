@@ -1,0 +1,43 @@
+.course-table {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 10px;
+  height: 360px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  p {
+    margin-block-end: 0;
+    padding: 5px 10px;
+  }
+
+  .title {
+    align-items: flex-start;
+  }
+
+  .course-items {
+    background-color: #efefef;
+    margin-top: 5px;
+    padding-left: 4px;
+    &.last {
+      color: #b5b3b3;
+    }
+  }
+
+  .confirm-learn {
+    background-color: #30c8d6;
+    margin: 0 -11px;
+    padding: 9px 0;
+    border: 1px solid transparent;
+    border-radius: 0 0 10px 10px;
+    > a {
+      text-align: center;
+      color: white;
+      font-style: normal;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}

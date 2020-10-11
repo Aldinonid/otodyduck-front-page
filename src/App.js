@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/class" component={ClassPage} />
-        <Route exact path="/class/:id" component={DetailPage} />
+        <Route exact path="/class/:slug" component={DetailPage} />
         <Route exact path="/flow" component={FlowPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegsiterPage} />

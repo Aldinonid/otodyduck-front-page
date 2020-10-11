@@ -7,6 +7,9 @@ import Footer from "parts/Footer";
 import classDetails from "json/classDetails.json";
 
 export default class DetailPage extends Component {
+  componentDidMount() {
+    document.title = `Otodyduck | Class Detail`;
+  }
   render() {
     return (
       <>

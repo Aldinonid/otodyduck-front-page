@@ -27,6 +27,7 @@ export default function ClassList({ data }) {
                   <Fade bottom delay={200 * index}>
                     <ClassCard
                       item_id={item._id}
+                      slug={item.slug}
                       imageUrl={item.imageUrl}
                       name={item.name}
                       type={item.type}

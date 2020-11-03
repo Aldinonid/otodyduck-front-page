@@ -4,6 +4,8 @@ import propTypes from "prop-types";
 import Button from "elements/Button";
 import formatNumber from "utils/formatNumber";
 
+import NotFound from "assets/images/image-not-found.jpg";
+
 import "./index.scss";
 
 export default function ClassCard(props) {
@@ -11,6 +13,15 @@ export default function ClassCard(props) {
   const name = props.name;
   const className = ["badge-class", props.className];
   if (props.type === "FREE") className.push("badge-free");
+
+  const mentorStyle = {
+    height: "50px",
+    width: "50px",
+    backgroundImage: `url(${props.teacherImg || NotFound})`,
+    backgroundSize: "cover",
+    borderRadius: "50px",
+  };
+
   return (
     <div className="card">
       <Button
@@ -31,13 +42,7 @@ export default function ClassCard(props) {
       <hr />
       <div className="row align-items-center no-gutters">
         <div className="mt-2 mb-3 col-auto">
-          <img
-            src={props.teacherImg}
-            alt={props.teacherName}
-            height="50px"
-            width="50px"
-            style={{ borderRadius: "50px" }}
-          />
+          <div id="mentor-image" style={mentorStyle}></div>
         </div>
         <div className="col pl-2">
           <h5

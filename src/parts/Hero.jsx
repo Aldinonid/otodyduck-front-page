@@ -11,7 +11,7 @@ import formatNumber from "utils/formatNumber.js";
 
 import Button from "elements/Button";
 
-export default function Hero(props) {
+export default function Hero({ data }) {
   return (
     <Fade bottom>
       <section className="container">
@@ -39,29 +39,29 @@ export default function Hero(props) {
             </Button>
 
             <div className="row" style={{ marginTop: 80 }}>
-              <div className="col-auto">
+              <div className="col-auto" style={{ marginRight: 20 }}>
                 <img
                   height="60"
                   width="60"
                   src={IconStudent}
-                  alt={`${props.data.students} students`}
+                  alt={`${data?.students} students`}
                 />
                 <h6 className="mt-3">
-                  {formatNumber(props.data.students)}{" "}
+                  {formatNumber(data?.students || 0)}{" "}
                   <span className="text-gray-500 font-weight-500">
                     students
                   </span>
                 </h6>
               </div>
-              <div className="col-auto" style={{ marginRight: 30 }}>
+              <div className="col-auto" style={{ marginRight: 20 }}>
                 <img
                   height="60"
                   width="60"
                   src={IconClass}
-                  alt={`${props.data.classes} classes`}
+                  alt={`${data?.classes} classes`}
                 />
                 <h6 className="mt-3">
-                  {formatNumber(props.data.classes)}{" "}
+                  {formatNumber(data?.classes || 0)}{" "}
                   <span className="text-gray-500 font-weight-500">classes</span>
                 </h6>
               </div>
@@ -70,10 +70,10 @@ export default function Hero(props) {
                   height="60"
                   width="60"
                   src={IconTeacher}
-                  alt={`${props.data.teachers} teachers`}
+                  alt={`${data?.teachers} teachers`}
                 />
                 <h6 className="mt-3">
-                  {formatNumber(props.data.teachers)}{" "}
+                  {formatNumber(data?.teachers || 0)}{" "}
                   <span className="text-gray-500 font-weight-500">
                     teachers
                   </span>

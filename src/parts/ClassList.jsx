@@ -21,20 +21,20 @@ export default function ClassList({ data }) {
           <div className="container-grid">
             {/* DO LOOPING FOR 6 CARD */}
 
-            {data.slice(0, 6).map((item, index) => {
+            {data?.slice(0, 6).map((item, index) => {
               return (
                 <div className="item column-4" key={index}>
                   <Fade bottom delay={200 * index}>
                     <ClassCard
-                      item_id={item._id}
+                      item_id={item.id}
                       slug={item.slug}
-                      imageUrl={item.imageUrl}
+                      imageUrl={item.thumbnail}
                       name={item.name}
-                      type={item.type}
+                      type={item.type.toUpperCase()}
                       price={item.price}
-                      teacherImg={item.teacher.imageUrl}
-                      teacherName={item.teacher.name}
-                      teacherJob={item.teacher.job}
+                      teacherImg={item.mentor_id.avatar}
+                      teacherName={item.mentor_id.name}
+                      teacherJob={item.mentor_id.job}
                     />
                   </Fade>
                 </div>

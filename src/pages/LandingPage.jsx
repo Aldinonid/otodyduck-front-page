@@ -6,18 +6,29 @@ import ClassList from "parts/ClassList";
 import Flow from "parts/Flow";
 import Footer from "parts/Footer";
 
-import landingPage from "json/landingPage.json";
+import { axios } from "configs/axios";
+// import landingPage from "json/landingPage.json";
 
 export default class LandingPage extends Component {
+  state = {
+    landingPage: [],
+  };
+
   componentDidMount() {
     document.title = "Otodyduck | Home";
+
+    axios
+      .get(`${process.env.REACT_APP_API_HOST}/landing-page`)
+      .then((res) => this.setState({ landingPage: res.data }))
+      .catch((err) => console.log(err));
   }
+
   render() {
     return (
       <>
         <Header {...this.props} />
-        <Hero data={landingPage.hero} />
-        <ClassList data={landingPage.class} />
+        <Hero data={this.state.landingPage?.hero} />
+        <ClassList data={this.state.landingPage?.class} />
         <Flow />
         <Footer />
       </>

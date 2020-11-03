@@ -3,26 +3,28 @@ import Button from "elements/Button";
 import "./style.scss";
 
 const Course = ({ data }) => {
+  if (!data) return null;
+
   const MAX_LENGTH = 36;
   return (
     <div className="course-table">
       <div className="title">
         <h2>Course List</h2>
       </div>
-      {data.slice(0, 5).map((item, index) => {
+      {data?.slice(0, 5).map((item, index) => {
         return (
-          <div className="course-items" key={index}>
+          <div className="course-items text-dark" key={index}>
             <p>
-              {item.title.length > MAX_LENGTH
-                ? item.title.substring(0, MAX_LENGTH - 4) + " ..."
-                : item.title}
+              {item.title?.length > MAX_LENGTH
+                ? item.substring(0, MAX_LENGTH - 4) + " ..."
+                : item}
             </p>
           </div>
         );
       })}
 
       <div className="course-items last mb-2">
-        <p>{data.length - 5} Other Videos</p>
+        <p>{data?.length - 5} Other Videos</p>
       </div>
       <div className="confirm-learn">
         <Button type="link" href="/payment" className="btn d-block">

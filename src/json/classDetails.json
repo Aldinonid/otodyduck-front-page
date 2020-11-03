@@ -1,53 +1,167 @@
 {
-  "_id": "asd1293uasdads1",
-  "slug": "react-js",
-  "name": "React JS",
-  "mentor": "Aldin",
-  "total_students": 3489,
-  "level": "Intermediate",
-  "trailerUrl": "https://youtu.be/ZNVRETPPW24",
-  "courseList": [
-    { "title": "React JS Introduction" },
-    { "title": "JSX Introduction" },
-    { "title": "Component & Props" },
-    { "title": "State in React" },
-    { "title": "Handle Event" },
-    { "title": "Build a To Do list in React JS" },
-    { "title": "Immutable in React JS" },
-    { "title": "Immutable in React JS" },
-    { "title": "Immutable in React JS" },
-    { "title": "Immutable in React JS" },
-    { "title": "Immutable in React JS" },
-    { "title": "Consume API with React JS" }
-  ],
-  "description": "React JS is a JavaScript library that is used by web developers to build websites that are more interactive, fast, and responsive. This library is often used to create a Single Page Application (SPA). In this free class we will build a simple online store using HTML, CSS, JavaScript (React JS). Of course we will learn the basics of using this library on our website such as Components, Props, Events, Conditional, and many others. ",
-  "tool": [
+  "id": 5,
+  "name": "React JavaScript",
+  "slug": "react-javascript",
+  "certificate": 0,
+  "thumbnail": "http://localhost:4000/images/course/1603732893144.jpg",
+  "type": "free",
+  "status": "published",
+  "price": 0,
+  "level": "beginner",
+  "description": "React JS adalah library JavaScript yang digunakan oleh web developer dalam membangun website yang lebih interactive, fast, dan responsive. Library ini sering digunakan untuk membuat Single Page Application (SPA). Di kelas gratis ini kita akan membangun toko online sederhana dengan menggunakan HTML, CSS, JavaScript (React JS). Tentunya kita akan mempelajari dasar dari penggunaan library ini pada website kita seperti Components, Props, Events, Conditional, dan masih banyak lainnya.",
+  "mentor_id": {
+      "id": 1,
+      "name": "Aldino Efendi",
+      "email": "aldino.efendi7@gmail.com",
+      "job": "Full-Stack Web Developer",
+      "avatar": "http://localhost:4000/images/mentor/1603732919773.jpeg",
+      "role": "teacher"
+  },
+  "created_at": "2020-11-01 17:11:17",
+  "updated_at": "2020-11-01 17:11:17",
+  "reviews": [],
+  "total_videos": 0,
+  "total_students": 0,
+  "tools": [
     {
-      "name": "Visual Studio Code",
-      "imageurl": "/images/tool-1.png",
-      "url": "https://code.visualstudio.com/download"
-    },
-    {
+      "id": 2,
       "name": "React JS",
-      "imageurl": "/images/tool-2.png",
-      "url": "https://reactjs.org/"
+      "url": "https://www.reactjs.org/",
+      "image": "http://localhost:4000/images/tool/1603733431564.png",
+      "created_at": "2020-11-03 16:11:34",
+      "updated_at": "2020-11-03 16:11:34"
     },
     {
-      "name": "Node JS",
-      "imageurl": "/images/tool-3.png",
-      "url": "https://nodejs.org/en/download/"
+      "id": 3,
+      "name": "React Native",
+      "url": "https://reactnative.dev/",
+      "image": "http://localhost:4000/images/tool/1603733431564.png",
+      "created_at": "2020-11-03 16:11:56",
+      "updated_at": "2020-11-03 16:11:56"
     }
   ],
-  "teacher": [
+  "chapters": [
     {
-      "name": "Aldino Efendi",
-      "job": "Full-Stack Web Developer",
-      "imageUrl": "/images/img-teacher-1.jpeg"
+      "id": 4,
+      "name": "Getting Started",
+      "course_id": 1,
+      "created_at": "2020-06-30 12:06:10",
+      "updated_at": "2020-06-30 12:06:10",
+      "lessons": [
+        {
+          "id": 1,
+          "name": "Introduction",
+          "video": "blHOEeYcPHg",
+          "chapter_id": 4,
+          "created_at": "2020-06-30 12:06:46",
+          "updated_at": "2020-06-30 12:06:46"
+        },
+        {
+          "id": 2,
+          "name": "Tools Required",
+          "video": "nFQ7O79a5J0",
+          "chapter_id": 4,
+          "created_at": "2020-06-30 12:06:14",
+          "updated_at": "2020-06-30 12:06:14"
+        },
+        {
+          "id": 3,
+          "name": "Setup",
+          "video": "-7uDx5V08fY",
+          "chapter_id": 4,
+          "created_at": "2020-06-30 12:06:32",
+          "updated_at": "2020-06-30 12:06:32"
+        }
+      ]
     },
     {
-      "name": "伊藤彩沙",
-      "job": "Voice Actor",
-      "imageUrl": "/images/img-teacher-6.jpg"
+      "id": 5,
+      "name": "Work in project",
+      "course_id": 1,
+      "created_at": "2020-06-30 12:06:13",
+      "updated_at": "2020-06-30 12:06:13",
+      "lessons": [
+        {
+          "id": 4,
+          "name": "Button example",
+          "video": "wNhqPsL1x2o",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:46",
+          "updated_at": "2020-06-30 12:06:46"
+        },
+        {
+          "id": 5,
+          "name": "Button example 2",
+          "video": "ksLORi0NCOQ",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:57",
+          "updated_at": "2020-06-30 12:06:57"
+        },
+        {
+          "id": 6,
+          "name": "Setup Grid",
+          "video": "Tig70YJZR90",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:10",
+          "updated_at": "2020-06-30 12:06:10"
+        },
+        {
+          "id": 7,
+          "name": "Cards example",
+          "video": "ZQS30sXGnlw",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:24",
+          "updated_at": "2020-06-30 12:06:24"
+        },
+        {
+          "id": 8,
+          "name": "Responsive grid",
+          "video": "NBwYsrLdifo",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:36",
+          "updated_at": "2020-06-30 12:06:36"
+        },
+        {
+          "id": 9,
+          "name": "Watch build",
+          "video": "rbB8J1pq9e8",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:51",
+          "updated_at": "2020-06-30 12:06:51"
+        },
+        {
+          "id": 10,
+          "name": "More configs",
+          "video": "sMh80K8c7OA",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:02",
+          "updated_at": "2020-06-30 12:06:02"
+        },
+        {
+          "id": 11,
+          "name": "Navbar example",
+          "video": "RrdE0y08NQ8",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:13",
+          "updated_at": "2020-06-30 12:06:13"
+        },
+        {
+          "id": 12,
+          "name": "Hero example",
+          "video": "8cnZhGwpdD8",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:23",
+          "updated_at": "2020-06-30 12:06:23"
+        },
+        {
+          "id": 13,
+          "name": "What's next",
+          "video": "1E7CMDJYdIs",
+          "chapter_id": 5,
+          "created_at": "2020-06-30 12:06:32",
+          "updated_at": "2020-06-30 12:06:32"
+        }
+      ]
     }
   ]
 }

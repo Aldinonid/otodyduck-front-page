@@ -1,64 +1,64 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Fade from "react-reveal/Fade";
 
 import ClassCard from "elements/ClassCard";
 
+import { Link } from "react-router-dom";
 import "assets/scss/style.scss";
 import NotFound from "assets/images/image-not-found.jpg";
+import { axios } from "configs/axios";
 
 export default function AllClassList({ data }) {
-  // const [Search, setSearch] = useState(() => "");
-  // const [SearchFocus, setSearchFocus] = useState(() => false);
-  // const [SearchResponse, setSearchResponse] = useState(() => ({
-  //   isLoading: false,
-  //   isError: false,
-  //   data: [],
-  // }));
+  const [Search, setSearch] = useState(() => "");
+  const [SearchFocus, setSearchFocus] = useState(() => false);
+  const [SearchResponse, setSearchResponse] = useState(() => ({
+    isLoading: false,
+    isError: false,
+    data: [],
+  }));
 
-  // const selectWrapper = useRef(null);
+  const selectWrapper = useRef(null);
 
-  // function clickOutside(event) {
-  //   if (selectWrapper && selectWrapper.current.contains(event.target)) {
-  //     setSearch("");
-  //   }
-  // }
+  function clickOutside(event) {
+    if (selectWrapper && !selectWrapper.current?.contains(event.target)) {
+      setSearch("");
+    }
+  }
 
-  // let timeoutSearch = useRef(null);
-  // function handleSearch(event) {
-  //   event.persist();
-  //   setSearch(event.target.value);
-  //   clearTimeout(timeoutSearch.current);
-  //   timeoutSearch.current = setTimeout(() => {
-  //     setSearchResponse({
-  //       isLoading: true,
-  //       isError: false,
-  //       data: null,
-  //     });
-  //     courses
-  //       .all({ params: { q: event.target.value } })
-  //       .then((res) => {
-  //         setSearchResponse({
-  //           isLoading: false,
-  //           isError: false,
-  //           data: res.data,
-  //         });
-  //       })
-  //       .catch((err) => {
-  //         setSearchResponse({
-  //           isLoading: false,
-  //           isError: true,
-  //           data: null,
-  //         });
-  //       });
-  //   }, 1000);
-  // }
+  let timeoutSearch = useRef(null);
+  function handleSearch(e) {
+    e.persist();
+    setSearch(e.target.value);
+    clearTimeout(timeoutSearch.current);
+    timeoutSearch.current = setTimeout(() => {
+      setSearchResponse({
+        isLoading: true,
+        isError: false,
+        data: null,
+      });
+      axios
+        .get(`${process.env.REACT_APP_API_HOST}/courses`, {
+          params: { status: "published", q: e.target.value },
+        })
+        .then((res) => {
+          setSearchResponse({
+            isLoading: false,
+            isError: false,
+            data: res.data.data,
+          });
+        })
+        .catch((err) =>
+          setSearchResponse({ isLoading: false, isError: true, data: null })
+        );
+    }, 1000);
+  }
 
-  // useEffect(() => {
-  //   window.addEventListener("mousedown", clickOutside);
-  //   return () => {
-  //     window.addEventListener("mousedown", clickOutside);
-  //   };
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("mousedown", clickOutside);
+    return () => {
+      window.removeEventListener("mousedown", clickOutside);
+    };
+  }, []);
 
   return (
     <section className="container">
@@ -73,30 +73,68 @@ export default function AllClassList({ data }) {
         </div>
         <div className="row justify-content-md-center mb-5">
           <div className="col-8">
-            <div class="form-group has-search">
+            <div class="form-group has-search" ref={selectWrapper}>
               <span class="fa fa-search form-control-feedback"></span>
               <input
                 id="q"
                 type="text"
-                // onChange={handleSearch}
-                // onFocus={() => setSearchFocus(!SearchFocus)}
-                // onBlur={() => setSearchFocus(!SearchFocus)}
-                // value={Search}
-                // class="form-control"
-                // placeholder={
-                //   SearchFocus
-                //     ? "Type minimum 3 word to search class"
-                //     : "Looking for a class ?"
-                // }
+                onChange={handleSearch}
+                onFocus={() => setSearchFocus(!SearchFocus)}
+                onBlur={() => setSearchFocus(!SearchFocus)}
+                value={Search}
+                class="form-control"
+                placeholder={
+                  SearchFocus
+                    ? "Type minimum 3 word to search class"
+                    : "Looking for a class ?"
+                }
               />
-              {/* {Search.length >= 3 && (
-                <div className="flex flex-col" style={{ top: 75 }}></div>
-              )} */}
+              {Search.length >= 3 && (
+                <div className="d-flex flex-column border border-gray">
+                  {SearchResponse.isLoading ? (
+                    "Loading..."
+                  ) : (
+                    <>
+                      {SearchResponse.isError && "Something wrong"}
+                      {SearchResponse?.data?.map((item, index) => {
+                        return (
+                          <div
+                            className="d-flex align-items-center -mx-4 py-2 search-relative"
+                            key={index}
+                          >
+                            <div className="w-auto px-4">
+                              <img
+                                src={item?.thumbnail ?? ""}
+                                alt={item?.name ?? "Course Name"}
+                                height="100"
+                                width="150"
+                                className="rounded"
+                              />
+                            </div>
+                            <div className="w-full px-4">
+                              <h4 className="medium">
+                                {item?.name ?? "Course Name"}
+                              </h4>
+                              <p className="text-gray-500">
+                                {item?.level ?? "beginner"}{" "}
+                              </p>
+                              <Link
+                                to={`/class/${item?.slug}`}
+                                className="stretched-link"
+                              ></Link>
+                            </div>
+                          </div>
+                        );
+                      }) || "No Course Found"}
+                    </>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
       </Fade>
-      <div className="container-grid mb-5">
+      <div className="container-grid mb-5 list-course-all">
         {data?.map((item, index) => {
           return (
             <div className="item column-4" key={index}>

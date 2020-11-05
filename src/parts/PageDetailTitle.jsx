@@ -41,7 +41,9 @@ export default function ClassDetail({ data }) {
             </div>
             <div className="col text-center">
               <h3 className="medium">Level</h3>
-              <h4 className="text-primary font-weight-light">{data.level}</h4>
+              <h4 className="text-primary font-weight-light">
+                {data.level?.toUpperCase()}
+              </h4>
             </div>
           </div>
         </Fade>

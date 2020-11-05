@@ -7,7 +7,6 @@ import Flow from "parts/Flow";
 import Footer from "parts/Footer";
 
 import { axios } from "configs/axios";
-// import landingPage from "json/landingPage.json";
 
 export default class LandingPage extends Component {
   state = {

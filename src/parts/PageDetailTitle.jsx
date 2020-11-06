@@ -6,6 +6,7 @@ import Fade from "react-reveal/Fade";
 import Course from "elements/Course";
 import Mentor from "elements/MentorCard";
 import Accordion from "elements/Accordion";
+import capitalizeFirstLetter from "utils/capitalizeFirstLetter";
 
 export default function ClassDetail({ data }) {
   const trailerId = data.chapters[0].lessons[0].video;
@@ -42,7 +43,7 @@ export default function ClassDetail({ data }) {
             <div className="col text-center">
               <h3 className="medium">Level</h3>
               <h4 className="text-primary font-weight-light">
-                {data.level?.toUpperCase()}
+                {capitalizeFirstLetter(data.level)}
               </h4>
             </div>
           </div>

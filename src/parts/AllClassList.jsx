@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 import "assets/scss/style.scss";
 import NotFound from "assets/images/image-not-found.jpg";
 import { axios } from "configs/axios";
+import capitalizeFirstLetter from "utils/capitalizeFirstLetter";
 
 export default function AllClassList({ data }) {
+  const [Course, setCourse] = useState(data);
   const [Search, setSearch] = useState(() => "");
   const [SearchFocus, setSearchFocus] = useState(() => false);
   const [SearchResponse, setSearchResponse] = useState(() => ({
@@ -44,7 +46,7 @@ export default function AllClassList({ data }) {
           setSearchResponse({
             isLoading: false,
             isError: false,
-            data: res.data.data,
+            data: res.data,
           });
         })
         .catch((err) =>
@@ -60,6 +62,17 @@ export default function AllClassList({ data }) {
     };
   }, []);
 
+  const allFilter = () => {
+    setCourse(data);
+  };
+
+  const categoryFilter = (filter) => {
+    const filterData = data.filter((cat) => cat.category === filter);
+    setCourse(filterData);
+  };
+
+  console.log(Course);
+
   return (
     <section className="container">
       <Fade bottom>
@@ -70,6 +83,35 @@ export default function AllClassList({ data }) {
             <br />
             Let's follow the development of technology.
           </h5>
+        </div>
+        <div className="d-flex justify-content-center mb-5 mt-5">
+          <h5 className="font-weight-light mr-4 align-middle pt-1">
+            By Category:{" "}
+          </h5>
+          <button
+            className="btn btn-primary mr-3 text-uppercase text-light medium"
+            onClick={allFilter}
+          >
+            ALl
+          </button>
+          <button
+            className="btn btn-primary mr-3 text-uppercase text-light medium"
+            onClick={() => categoryFilter("design")}
+          >
+            Design
+          </button>
+          <button
+            className="btn btn-primary mr-3 text-uppercase text-light medium"
+            onClick={() => categoryFilter("development")}
+          >
+            Development
+          </button>
+          <button
+            className="btn btn-primary text-uppercase text-light medium"
+            onClick={() => categoryFilter("soft skill")}
+          >
+            Soft Skill
+          </button>
         </div>
         <div className="row justify-content-md-center mb-5">
           <div className="col-8">
@@ -115,8 +157,10 @@ export default function AllClassList({ data }) {
                               <h4 className="medium">
                                 {item?.name ?? "Course Name"}
                               </h4>
-                              <p className="text-gray-500">
-                                {item?.level ?? "beginner"}{" "}
+                              <p className="text-dark">
+                                {`Class By ${capitalizeFirstLetter(
+                                  item?.mentor_id?.name
+                                )}` ?? "Class By Mentor Name"}{" "}
                               </p>
                               <Link
                                 to={`/class/${item?.slug}`}
@@ -135,7 +179,7 @@ export default function AllClassList({ data }) {
         </div>
       </Fade>
       <div className="container-grid mb-5 list-course-all">
-        {data?.map((item, index) => {
+        {Course?.map((item, index) => {
           return (
             <div className="item column-4" key={index}>
               <Fade bottom delay={100 * index}>

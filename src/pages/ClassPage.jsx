@@ -27,7 +27,7 @@ export default class ClassPage extends Component {
     return (
       <>
         <Header {...this.props} />
-        <AllClassList data={this.state.classList?.data} />
+        <AllClassList data={this.state.classList} />
         <Flow />
         <Footer />
       </>

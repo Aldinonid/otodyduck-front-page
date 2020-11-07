@@ -5,7 +5,6 @@ import PageDetailTitle from "parts/PageDetailTitle";
 import Footer from "parts/Footer";
 
 import { axios } from "configs/axios";
-import classDetails from "json/classDetails.json";
 
 export default class DetailPage extends Component {
   state = {
@@ -27,8 +26,7 @@ export default class DetailPage extends Component {
     return (
       <>
         <Header {...this.props} />
-        {/* <PageDetailTitle data={this.state?.classDetail} /> */}
-        <PageDetailTitle data={classDetails} />
+        <PageDetailTitle data={this.state?.classDetail} />
         <Footer />
       </>
     );

@@ -9,13 +9,13 @@ import Accordion from "elements/Accordion";
 import capitalizeFirstLetter from "utils/capitalizeFirstLetter";
 
 export default function ClassDetail({ data }) {
-  const trailerId = data.chapters[0].lessons[0].video;
+  const trailerId = data?.chapter?.[0].lesson[0].video;
 
   let courseList = [];
-  const chapters = data.chapters || 0;
-  chapters.map((chapter) =>
-    chapter.lessons.map((lesson) => courseList.push(lesson.name))
+  let chapters = data.chapter?.map((chapter) =>
+    chapter?.lesson?.map((lesson) => courseList.push(lesson.name))
   );
+  console.log(chapters);
 
   return (
     <>
@@ -43,7 +43,7 @@ export default function ClassDetail({ data }) {
             <div className="col text-center">
               <h3 className="medium">Level</h3>
               <h4 className="text-primary font-weight-light">
-                {capitalizeFirstLetter(data.level)}
+                {capitalizeFirstLetter(data?.level ?? "Level")}
               </h4>
             </div>
           </div>
@@ -53,10 +53,11 @@ export default function ClassDetail({ data }) {
             <div className="col col-8">
               <Youtube
                 videoId={trailerId}
+                id={trailerId}
                 opts={{
                   playerVars: {
                     loop: 1,
-                    mute: 1,
+                    mute: 0,
                     autoplay: 1,
                   },
                 }}
@@ -127,10 +128,10 @@ export default function ClassDetail({ data }) {
         <div className="" style={{ width: "70%" }}>
           <h2>Join and Learn</h2>
           <p>Class Course that we will study</p>
-          {data?.chapters?.map((chapter, chapterIndex) => {
+          {data?.chapter?.map((chapter, chapterIndex) => {
             return (
               <Accordion title={chapter.name} key={chapterIndex}>
-                {chapter.lessons.map((lesson, lessonIndex) => {
+                {chapter.lesson?.map((lesson, lessonIndex) => {
                   return (
                     <p className="accordion__text" key={lessonIndex}>
                       {lesson.name}

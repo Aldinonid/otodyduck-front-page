@@ -71,8 +71,6 @@ export default function AllClassList({ data }) {
     setCourse(filterData);
   };
 
-  console.log(Course);
-
   return (
     <section className="container">
       <Fade bottom>

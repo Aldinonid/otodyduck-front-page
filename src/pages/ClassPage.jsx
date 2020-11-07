@@ -17,7 +17,9 @@ export default class ClassPage extends Component {
     document.title = "Otodyduck | Class List";
 
     axios
-      .get(`${process.env.REACT_APP_API_HOST}/courses`)
+      .get(`${process.env.REACT_APP_API_HOST}/courses`, {
+        params: { status: "published" },
+      })
       .then((res) => {
         this.setState({ classList: res.data });
       })

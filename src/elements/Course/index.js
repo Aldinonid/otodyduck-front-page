@@ -2,7 +2,7 @@ import React from "react";
 import Button from "elements/Button";
 import "./style.scss";
 
-const Course = ({ data }) => {
+const Course = ({ data, slug }) => {
   if (!data) return null;
 
   const MAX_LENGTH = 36;
@@ -27,7 +27,12 @@ const Course = ({ data }) => {
         <p>{data?.length - 5} Other Videos</p>
       </div>
       <div className="confirm-learn">
-        <Button type="link" href="/payment" className="btn d-block">
+        <Button
+          isExternal
+          type="link"
+          href={`${process.env.REACT_APP_MEMBERPAGE_URL}/joined/${slug}`}
+          className="btn d-block"
+        >
           Enroll This Course
         </Button>
       </div>

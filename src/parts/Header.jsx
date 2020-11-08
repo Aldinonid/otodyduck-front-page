@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 
 import Button from "elements/Button";
 import BrandIcon from "./IconText";
 
 export default function Header(props) {
-  const router = useLocation();
   const [User, setUser] = useState(() => null);
 
   useEffect(() => {
@@ -24,10 +22,11 @@ export default function Header(props) {
   };
 
   const linkCTA =
-    router.pathname.indexOf("/login") > -1
+    props.location.pathname.indexOf("/login") > -1
       ? `${process.env.REACT_APP_MEMBERPAGE_URL}/register`
       : `${process.env.REACT_APP_MEMBERPAGE_URL}/login`;
-  const textCTA = router.pathname.indexOf("/login") > -1 ? "Register" : "Login";
+  const textCTA =
+    props.location.pathname.indexOf("/login") > -1 ? "Register" : "Login";
 
   if (props.isCentered) {
     return (

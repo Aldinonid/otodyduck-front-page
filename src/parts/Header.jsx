@@ -1,13 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 
 import Button from "elements/Button";
 import BrandIcon from "./IconText";
 
 export default function Header(props) {
+  const router = useLocation();
+  const [User, setUser] = useState(() => null);
+
+  useEffect(() => {
+    const userCookie =
+      decodeURIComponent(window.document.cookie)
+        ?.split(";")
+        ?.find?.((item) => item.indexOf("OTODYDUCK:user") > -1)
+        ?.split("=")[1] ?? null;
+
+    setUser(userCookie ? JSON.parse(userCookie) : null);
+  }, []);
+
   const getNavLinkClass = (path) => {
     return props.location.pathname === path ? " active" : "";
   };
+
+  const linkCTA =
+    router.pathname.indexOf("/login") > -1
+      ? `${process.env.REACT_APP_MEMBERPAGE_URL}/register`
+      : `${process.env.REACT_APP_MEMBERPAGE_URL}/login`;
+  const textCTA = router.pathname.indexOf("/login") > -1 ? "Register" : "Login";
 
   if (props.isCentered) {
     return (
@@ -32,7 +52,7 @@ export default function Header(props) {
           <nav className="navbar navbar-expand-lg navbar-light">
             <BrandIcon />
             <div className="collapse navbar-collapse">
-              <ul className="navbar-nav ml-auto">
+              <ul className="navbar-nav ml-auto d-flex align-items-center">
                 <li className={`nav-item${getNavLinkClass("/")}`}>
                   <Button className="nav-link" type="link" href="/">
                     Home
@@ -48,14 +68,37 @@ export default function Header(props) {
                     Flow Learn
                   </Button>
                 </li>
-                <li className={`nav-item${getNavLinkClass("/login")}`}>
-                  <Button
-                    className="btn btn-primary text-white medium"
-                    type="link"
-                    href="/login"
-                  >
-                    Login
-                  </Button>
+                <li className="nav-item">
+                  {User ? (
+                    <Button
+                      isExternal
+                      href={linkCTA}
+                      type="link"
+                      className="btn medium d-flex d-inline-flex align-items-center user-profile"
+                    >
+                      <div className="mr-3 span-profile">
+                        {User?.thumbnail ? (
+                          <img
+                            src={User?.thumbnail}
+                            alt={User?.name ?? "Username"}
+                            className="rounded-circle"
+                          />
+                        ) : (
+                          "User Image"
+                        )}
+                      </div>
+                      Hi, {User.name}
+                    </Button>
+                  ) : (
+                    <Button
+                      isExternal
+                      className="btn btn-primary text-white medium"
+                      type="link"
+                      href={linkCTA}
+                    >
+                      {textCTA}
+                    </Button>
+                  )}
                 </li>
               </ul>
             </div>

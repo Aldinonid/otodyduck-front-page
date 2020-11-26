@@ -6,7 +6,6 @@ import Flow from "parts/Flow";
 import Footer from "parts/Footer";
 
 import { axios } from "configs/axios";
-// import classPage from "json/classPage.json";
 
 export default class ClassPage extends Component {
   state = {

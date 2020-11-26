@@ -10,7 +10,7 @@ import { axios } from "configs/axios";
 import capitalizeFirstLetter from "utils/capitalizeFirstLetter";
 
 export default function AllClassList({ data }) {
-  const [Course, setCourse] = useState(data);
+  const [Course, setCourse] = useState();
   const [Search, setSearch] = useState(() => "");
   const [SearchFocus, setSearchFocus] = useState(() => false);
   const [SearchResponse, setSearchResponse] = useState(() => ({
@@ -54,6 +54,10 @@ export default function AllClassList({ data }) {
         );
     }, 1000);
   }
+
+  useEffect(() => {
+    setCourse(data);
+  }, [data]);
 
   useEffect(() => {
     window.addEventListener("mousedown", clickOutside);

@@ -1,11 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import LandingPage from "pages/LandingPage";
-import ClassPage from "pages/ClassPage";
-import FlowPage from "pages/FlowPage";
-import DetailPage from "pages/DetailPage";
-
+import { ClassPage, DetailPage, LandingPage, NotFound } from "pages";
 import "assets/scss/style.scss";
 
 function App() {
@@ -13,9 +9,10 @@ function App() {
     <div className="App">
       <Router>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/class" component={ClassPage} />
-        <Route exact path="/class/:slug" component={DetailPage} />
-        <Route exact path="/flow" component={FlowPage} />
+        <Route path="/class" component={ClassPage} />
+        <Route path="/class/:slug" component={DetailPage} />
+        {/* <Route exact path="/flow" component={FlowPage} /> */}
+        <Route path="*" component={NotFound} />
       </Router>
     </div>
   );

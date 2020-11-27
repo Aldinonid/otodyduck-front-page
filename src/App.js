@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Router>
         <Route exact path="/" component={LandingPage} />
-        <Route path="/class" component={ClassPage} />
+        <Route exact path="/class" component={ClassPage} />
         <Route path="/class/:slug" component={DetailPage} />
         {/* <Route exact path="/flow" component={FlowPage} /> */}
         <Route path="*" component={NotFound} />

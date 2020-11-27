@@ -13,6 +13,7 @@ export default class DetailPage extends Component {
 
   componentDidMount() {
     document.title = `Otodyduck | Class Detail`;
+    window.scrollTo(0, 0);
 
     axios
       .get(

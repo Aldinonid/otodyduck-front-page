@@ -117,8 +117,8 @@ export default function AllClassList({ data }) {
         </div>
         <div className="row justify-content-md-center mb-5">
           <div className="col-8">
-            <div class="form-group has-search" ref={selectWrapper}>
-              <span class="fa fa-search form-control-feedback"></span>
+            <div className="form-group has-search" ref={selectWrapper}>
+              <span className="fa fa-search form-control-feedback"></span>
               <input
                 id="q"
                 type="text"
@@ -126,7 +126,7 @@ export default function AllClassList({ data }) {
                 onFocus={() => setSearchFocus(!SearchFocus)}
                 onBlur={() => setSearchFocus(!SearchFocus)}
                 value={Search}
-                class="form-control"
+                className="form-control"
                 placeholder={
                   SearchFocus
                     ? "Type minimum 3 word to search class"

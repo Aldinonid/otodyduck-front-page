@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
 
+import UserImage from "assets/images/no-user.png";
+
 import Button from "elements/Button";
 import BrandIcon from "./IconText";
 
@@ -83,7 +85,11 @@ export default function Header(props) {
                             className="rounded-circle"
                           />
                         ) : (
-                          "User Image"
+                          <img
+                            src={UserImage}
+                            alt="User Name"
+                            className="rounded-circle"
+                          />
                         )}
                       </div>
                       Hi, {User.name}

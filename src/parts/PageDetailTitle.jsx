@@ -67,7 +67,7 @@ export default function ClassDetail({ data }) {
 
           <Fade bottom>
             <div className="col-4 mb-3">
-              <Course data={courseList} slug={data?.slug} />
+              <Course data={courseList} slug={data?.slug} type={data?.type} />
             </div>
           </Fade>
         </div>

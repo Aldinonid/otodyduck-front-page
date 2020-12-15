@@ -2,7 +2,7 @@ import React from "react";
 import Button from "elements/Button";
 import "./style.scss";
 
-const Course = ({ data, slug }) => {
+const Course = ({ data, slug, type }) => {
   if (!data) return null;
 
   const MAX_LENGTH = 36;
@@ -31,9 +31,11 @@ const Course = ({ data, slug }) => {
           isExternal
           type="link"
           href={`${process.env.REACT_APP_MEMBERPAGE_URL}/joined/${slug}`}
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn d-block"
         >
-          Enroll This Course
+          {type === "premium" ? "Buy Now" : "Enroll Now"}
         </Button>
       </div>
     </div>

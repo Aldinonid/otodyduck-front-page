@@ -14,6 +14,7 @@ export default class ClassPage extends Component {
 
   componentDidMount() {
     document.title = "Otodyduck | Class List";
+    window.scrollTo(0, 0);
 
     axios
       .get(`${process.env.REACT_APP_API_HOST}/courses`, {

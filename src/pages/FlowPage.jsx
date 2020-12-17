@@ -10,9 +10,10 @@ export default class FlowPage extends Component {
   state = {
     flowList: [],
   };
-  
+
   componentDidMount() {
     document.title = "Otodyduck | Flow Learning";
+    window.scrollTo(0, 0);
 
     axios
       .get(`${process.env.REACT_APP_API_HOST}/flow`)

@@ -15,6 +15,7 @@ export default class LandingPage extends Component {
 
   componentDidMount() {
     document.title = "Otodyduck | Home";
+    window.scrollTo(0, 0);
 
     axios
       .get(`${process.env.REACT_APP_API_HOST}/landing-page`)

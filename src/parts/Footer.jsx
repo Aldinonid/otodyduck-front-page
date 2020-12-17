@@ -22,12 +22,12 @@ export default function Footer() {
               <h4 className="mt-2">For Beginners</h4>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
-                  <Button type="link" href="/all-class">
+                  <Button type="link" href="/class">
                     Classes
                   </Button>
                 </li>
                 <li className="list-group-item">
-                  <Button type="link" href="/flow-learn">
+                  <Button type="link" href="/journey">
                     Packet Learning
                   </Button>
                 </li>
@@ -70,6 +70,7 @@ export default function Footer() {
                     type="link"
                     href="https://youtube.com/aldinonid"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Youtube
                   </Button>
@@ -80,6 +81,7 @@ export default function Footer() {
                     type="link"
                     href="https://facebook.com/aldinonidefendi"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Facebook
                   </Button>
@@ -90,6 +92,7 @@ export default function Footer() {
                     type="link"
                     href="https://instagram.com/aldinonid"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Instagram
                   </Button>

@@ -22,12 +22,12 @@ export default function FlowList({ data }) {
             <div className="item column-6" index={index}>
               <Fade bottom delay={300 * index}>
                 <FlowCard
-                  item_id={item._id}
-                  slugh={item.slugh}
-                  imageUrl={item.imageUrl}
+                  item_id={item.id}
+                  slug={item.slug}
+                  imageUrl={item.image}
                   name={item.name}
                   level={item.level}
-                  classTotal={item.classTotal}
+                  classTotal={item.total_course}
                 />
               </Fade>
             </div>

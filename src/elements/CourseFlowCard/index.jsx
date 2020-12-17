@@ -4,41 +4,43 @@ import Button from "elements/Button";
 
 import capitalizeFirstLetter from "utils/capitalizeFirstLetter";
 
-export default function FlowCard(props) {
-  const MAX_LENGTH = 40;
-  const name = props.name;
+const CourseFlowCard = ({ data }) => {
+  const MAX_LENGTH = 26;
+  const name = data?.name;
   return (
-    <div className="card">
+    <div className="card mb-4">
       <div className="row">
-        <div className="col-lg-6">
+        <div className="col-5">
           <img
-            src={props.imageUrl}
-            alt={props.slug}
+            src={data?.thumbnail}
+            alt="wkwk"
             className="img-flow"
             width="234px"
             height="180px"
             style={{ borderRadius: "10px" }}
           />
         </div>
-        <div className="col-lg-6 px-0 text-dark mt-2">
+        <div className="col-7 text-dark mt-2">
           <h3>
             {name.length > MAX_LENGTH
               ? name.substring(0, MAX_LENGTH - 3) + "..."
               : name}
           </h3>
-          <p className="text-gray-500">
-            {capitalizeFirstLetter(props.level)} • {props.classTotal} class
-          </p>
+          <p className="text-gray-500">{`${capitalizeFirstLetter(
+            data?.level
+          )} Level`}</p>
           <Button
             type="link"
-            href={`/journey/${props.slug}`}
+            href={`/class/${data?.slug}`}
             className="btn btn-primary text-white medium"
             isPrimary
           >
-            Start Journey
+            See Course
           </Button>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default CourseFlowCard;

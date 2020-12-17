@@ -64,8 +64,8 @@ export default function Header(props) {
                     All Class
                   </Button>
                 </li>
-                <li className={`nav-item${getNavLinkClass("/flow")}`}>
-                  <Button className="nav-link" type="link" href="/flow">
+                <li className={`nav-item${getNavLinkClass("/journey")}`}>
+                  <Button className="nav-link" type="link" href="/journey">
                     Flow Learn
                   </Button>
                 </li>

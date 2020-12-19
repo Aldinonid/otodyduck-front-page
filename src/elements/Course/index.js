@@ -5,7 +5,7 @@ import "./style.scss";
 const Course = ({ data, slug, type }) => {
   if (!data) return null;
 
-  const MAX_LENGTH = 36;
+  const MAX_LENGTH = 29;
   return (
     <div className="course-table">
       <div className="title">
@@ -15,8 +15,8 @@ const Course = ({ data, slug, type }) => {
         return (
           <div className="course-items text-dark" key={index}>
             <p>
-              {item.title?.length > MAX_LENGTH
-                ? item.substring(0, MAX_LENGTH - 4) + " ..."
+              {item?.length > MAX_LENGTH
+                ? item.substring(0, MAX_LENGTH - 3) + " ..."
                 : item}
             </p>
           </div>

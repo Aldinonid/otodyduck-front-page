@@ -5,7 +5,7 @@ import ClassCard from "elements/ClassCard";
 
 import { Link } from "react-router-dom";
 import "assets/scss/style.scss";
-import NotFound from "assets/images/image-not-found.jpg";
+import NotFound from "assets/images/no-user.png";
 import { axios } from "configs/axios";
 import capitalizeFirstLetter from "utils/capitalizeFirstLetter";
 

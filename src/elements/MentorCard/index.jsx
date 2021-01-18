@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 
-import NotFound from "assets/images/image-not-found.jpg";
+import NotFound from "assets/images/no-user.png";
 
 const index = ({ data }) => {
   if (!data) return null;

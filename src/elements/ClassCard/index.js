@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 import Button from "elements/Button";
 import formatNumber from "utils/formatNumber";
 
-import NotFound from "assets/images/image-not-found.jpg";
+import NotFound from "assets/images/no-user.png";
 
 import "./index.scss";
 

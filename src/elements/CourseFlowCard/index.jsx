@@ -16,7 +16,6 @@ const CourseFlowCard = ({ data }) => {
             alt="wkwk"
             className="img-flow"
             width="234px"
-            height="180px"
             style={{ borderRadius: "10px" }}
           />
         </div>

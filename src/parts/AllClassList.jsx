@@ -39,7 +39,7 @@ export default function AllClassList({ data }) {
         data: null,
       });
       axios
-        .get(`${process.env.REACT_APP_API_HOST}/courses`, {
+        .get(`${process.env.REACT_APP_API_HOST}/course`, {
           params: { status: "published", q: e.target.value },
         })
         .then((res) => {

@@ -17,7 +17,7 @@ export default class DetailPage extends Component {
 
     axios
       .get(
-        `${process.env.REACT_APP_API_HOST}/courses/${this.props.match.params.slug}`
+        `${process.env.REACT_APP_API_HOST}/course/${this.props.match.params.slug}`
       )
       .then((res) => this.setState({ classDetail: res.data.data }))
       .catch((err) => console.log(err));

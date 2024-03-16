@@ -17,7 +17,7 @@ export default class ClassPage extends Component {
     window.scrollTo(0, 0);
 
     axios
-      .get(`${process.env.REACT_APP_API_HOST}/courses`, {
+      .get(`${process.env.REACT_APP_API_HOST}/course`, {
         params: { status: "published" },
       })
       .then((res) => {

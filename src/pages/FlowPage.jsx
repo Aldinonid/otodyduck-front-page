@@ -18,7 +18,7 @@ export default class FlowPage extends Component {
     axios
       .get(`${process.env.REACT_APP_API_HOST}/flow`)
       .then((res) => {
-        this.setState({ flowList: res.data });
+        this.setState({ flowList: res.data.data });
       })
       .catch((err) => console.log(err));
   }

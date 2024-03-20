@@ -10,7 +10,7 @@ import { axios } from "configs/axios";
 import capitalizeFirstLetter from "utils/capitalizeFirstLetter";
 
 export default function AllClassList({ data }) {
-  const [Course, setCourse] = useState();
+  const [courses, setCourses] = useState();
   const [Search, setSearch] = useState(() => "");
   const [SearchFocus, setSearchFocus] = useState(() => false);
   const [SearchResponse, setSearchResponse] = useState(() => ({
@@ -32,12 +32,12 @@ export default function AllClassList({ data }) {
     e.persist();
     setSearch(e.target.value);
     clearTimeout(timeoutSearch.current);
+    setSearchResponse({
+      isLoading: true,
+      isError: false,
+      data: [],
+    });
     timeoutSearch.current = setTimeout(() => {
-      setSearchResponse({
-        isLoading: true,
-        isError: false,
-        data: null,
-      });
       axios
         .get(`${process.env.REACT_APP_API_HOST}/course`, {
           params: { status: "published", q: e.target.value },
@@ -46,17 +46,17 @@ export default function AllClassList({ data }) {
           setSearchResponse({
             isLoading: false,
             isError: false,
-            data: res.data,
+            data: res.data.data,
           });
         })
         .catch((err) =>
-          setSearchResponse({ isLoading: false, isError: true, data: null })
+          setSearchResponse({ isLoading: false, isError: true, data: [] })
         );
     }, 1000);
   }
 
   useEffect(() => {
-    setCourse(data);
+    setCourses(data);
   }, [data]);
 
   useEffect(() => {
@@ -67,12 +67,12 @@ export default function AllClassList({ data }) {
   }, []);
 
   const allFilter = () => {
-    setCourse(data);
+    setCourses(data);
   };
 
   const categoryFilter = (filter) => {
     const filterData = data.filter((cat) => cat.category === filter);
-    setCourse(filterData);
+    setCourses(filterData);
   };
 
   return (
@@ -136,11 +136,13 @@ export default function AllClassList({ data }) {
               {Search.length >= 3 && (
                 <div className="d-flex flex-column border border-gray">
                   {SearchResponse.isLoading ? (
-                    "Loading..."
+                    <div className="text-center h5 py-2">
+                      Loading...
+                    </div>
                   ) : (
                     <>
                       {SearchResponse.isError && "Something wrong"}
-                      {SearchResponse?.data?.map((item, index) => {
+                      {SearchResponse.data.length > 0 ? SearchResponse.data.map((item, index) => {
                         return (
                           <div
                             className="d-flex align-items-center -mx-4 py-2 search-relative"
@@ -161,7 +163,7 @@ export default function AllClassList({ data }) {
                               </h4>
                               <p className="text-dark">
                                 {`Class By ${capitalizeFirstLetter(
-                                  item?.mentor_id?.name
+                                  item?.user?.name
                                 )}` ?? "Class By Mentor Name"}{" "}
                               </p>
                               <Link
@@ -171,7 +173,11 @@ export default function AllClassList({ data }) {
                             </div>
                           </div>
                         );
-                      }) || "No Course Found"}
+                      }) : (
+                        <div className="text-center h5 py-2">
+                          No Course Found
+                        </div>
+                      )}
                     </>
                   )}
                 </div>
@@ -180,8 +186,13 @@ export default function AllClassList({ data }) {
           </div>
         </div>
       </Fade>
+      {courses?.length === 0 && (
+        <div className="text-center">
+          <h1 className="medium">No Classes</h1>
+        </div>
+      )}
       <div className="container-grid mb-5 list-course-all">
-        {Course?.map((item, index) => {
+        {courses?.map((item, index) => {
           return (
             <div className="item column-4" key={index}>
               <Fade bottom delay={100 * index}>
@@ -192,9 +203,9 @@ export default function AllClassList({ data }) {
                   name={item.name}
                   type={item.type.toUpperCase()}
                   price={item.price}
-                  teacherImg={item.mentor_id?.avatar || NotFound}
-                  teacherName={item.mentor_id?.name}
-                  teacherJob={item.mentor_id?.job}
+                  teacherImg={item.user?.avatar || NotFound}
+                  teacherName={item.user?.name}
+                  teacherJob={item.user?.job}
                 />
               </Fade>
             </div>

@@ -7,13 +7,14 @@ import Course from "elements/Course";
 import Mentor from "elements/MentorCard";
 import Accordion from "elements/Accordion";
 import capitalizeFirstLetter from "utils/capitalizeFirstLetter";
+import pluralize from "utils/pluralize";
 
 export default function ClassDetail({ data }) {
-  const trailerId = data?.chapter?.[0].lesson[0].video;
+  const trailerId = data?.chapters?.[0].lessons[0].video_url;
 
   let courseList = [];
-  let chapters = data.chapter?.map((chapter) =>
-    chapter?.lesson?.map((lesson) => courseList.push(lesson.name))
+  let chapters = data.chapters?.map((chapter) =>
+    chapter?.lessons?.map((lesson) => courseList.push(lesson.name))
   );
   console.log(chapters);
 
@@ -27,7 +28,7 @@ export default function ClassDetail({ data }) {
               {data.name}
             </h1>
             <h5 className="text-gray-500" style={{ marginTop: "-10px" }}>
-              Build by {data.mentor_id?.name}
+              Build by {data.user?.name}
             </h5>
           </div>
         </Fade>
@@ -37,7 +38,7 @@ export default function ClassDetail({ data }) {
             <div className="col text-center">
               <h3 className="medium">Student</h3>
               <h4 className="text-primary font-weight-light">
-                {data.total_students}
+                {pluralize(data.total_students, 'student')}
               </h4>
             </div>
             <div className="col text-center">
@@ -128,10 +129,10 @@ export default function ClassDetail({ data }) {
         <div className="" style={{ width: "70%" }}>
           <h2>Join and Learn</h2>
           <p>Class Course that we will study</p>
-          {data?.chapter?.map((chapter, chapterIndex) => {
+          {data?.chapters?.map((chapter, chapterIndex) => {
             return (
               <Accordion title={chapter.name} key={chapterIndex}>
-                {chapter.lesson?.map((lesson, lessonIndex) => {
+                {chapter.lessons?.map((lesson, lessonIndex) => {
                   return (
                     <p className="accordion__text" key={lessonIndex}>
                       {lesson.name}
@@ -155,7 +156,7 @@ export default function ClassDetail({ data }) {
             </div>
             <div className="row justify-content-center">
               <div className="col-3 mb-5">
-                <Mentor data={data.mentor_id} />
+                <Mentor data={data.user} />
               </div>
             </div>
           </Fade>

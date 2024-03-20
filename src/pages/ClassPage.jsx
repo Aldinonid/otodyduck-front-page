@@ -21,7 +21,7 @@ export default class ClassPage extends Component {
         params: { status: "published" },
       })
       .then((res) => {
-        this.setState({ classList: res.data });
+        this.setState({ classList: res.data.data });
       })
       .catch((err) => console.log(err));
   }

@@ -32,9 +32,9 @@ export default function ClassList({ data }) {
                       name={item.name}
                       type={item.type.toUpperCase()}
                       price={item.price}
-                      teacherImg={item.mentor_id.avatar}
-                      teacherName={item.mentor_id.name}
-                      teacherJob={item.mentor_id.job}
+                      teacherImg={item.user.avatar}
+                      teacherName={item.user.name}
+                      teacherJob={item.user.job}
                     />
                   </Fade>
                 </div>

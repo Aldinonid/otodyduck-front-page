@@ -19,7 +19,7 @@ export default class LandingPage extends Component {
 
     axios
       .get(`${process.env.REACT_APP_API_HOST}/landing-page`)
-      .then((res) => this.setState({ landingPage: res.data }))
+      .then((res) => this.setState({ landingPage: res.data.data }))
       .catch((err) => console.log(err));
   }
 

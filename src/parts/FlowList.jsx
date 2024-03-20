@@ -27,7 +27,7 @@ export default function FlowList({ data }) {
                   imageUrl={item.image}
                   name={item.name}
                   level={item.level}
-                  classTotal={item.total_course}
+                  classTotal={item.total_courses}
                 />
               </Fade>
             </div>
